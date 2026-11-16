@@ -7,9 +7,9 @@ Phase numbers match the master tracker (`../../PROGRESS.md`).
 ## Phase 0: Setup (11–14 Nov)
 - ✅ `CLAUDE.md`, README, docs files written by Claude (2026-11-11)
 - ✅ `docs/DECISIONS.md` pre-filled with the planning decisions (2026-11-11)
-- ⬜ `git init`, first commit, push to `ghifarij/kancilink` (me)
-- ⬜ Branch protection on `main` (me)
-- ⬜ Slice 1: skeleton + `/health` (Claude) → review quiz → merge
+- ✅ `git init`, first commit, push to `ghifarij/kancilink` (me) (2026-11-16)
+- ✅ Branch protection on `main`: ruleset `protect-main` (no deletion, no force push, pull request required, squash merge only, no bypass). Tested: a direct push is rejected (me) (2026-11-16)
+- 🟡 Slice 1: skeleton + `/health` (Claude) → review quiz → merge. Pull request opened 2026-11-16
 
 ## Phase 2: Foundations (17–21 Nov)
 - ⬜ Python basics (1 day) + Flask basics (1 day)

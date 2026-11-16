@@ -24,6 +24,22 @@ A URL shortener that I containerized, automated, deployed and broke on purpose t
 | Prometheus + Grafana | Traffic, error and latency graphs, so incidents are measured |
 | AWS EC2 + Cloudflare | One Linux server, HTTPS through Cloudflare |
 
+## Run it locally
+
+So far the app is a skeleton with one endpoint, `/health`. It needs Python 3.
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+
+pytest                              # run the tests
+flask --app app run --port 5001     # development server
+curl http://127.0.0.1:5001/health   # {"status":"ok"}
+```
+
+Port 5001 because macOS uses 5000 for AirPlay Receiver.
+
 ## How this was built
 
 I used Claude (AI) as a coding partner. The split is strict:
