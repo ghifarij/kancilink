@@ -1,0 +1,14 @@
+# Virtualenv
+.venv
+
+# Secrets
+.env
+
+# Bytecode caches
+__pycache__/
+
+# Pytest's cache
+.pytest_cache/
+
+# General MacOS metadata
+.DS_Store
