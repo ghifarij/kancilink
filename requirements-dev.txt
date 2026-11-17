@@ -1,0 +1,4 @@
+# What I need on top of that to work on the app: everything in
+# requirements.txt, plus the test runner.
+-r requirements.txt
+pytest==9.2.0

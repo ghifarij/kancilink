@@ -41,3 +41,9 @@ Decisions K1–K17 were made in the planning sessions on 2026-11-11.
 | K15 | **AWS only for deployment: one EC2 VM (x86, t3.small) + security group.** Postgres and Redis run as containers on it. Free plan credits; $1 budget alert | A plain Linux server makes me do the work the interview tests: SSH, firewall, nginx, deploy. A small, true claim ("one EC2 instance"). Fallbacks: Oracle Always Free, then Hetzner | Railway, Render, Fly.io: platforms that hide the server; no reliable free 24/7 tier. RDS/ElastiCache: cost, and claims I couldn't defend |
 | K16 | **x86 server** | GitHub's default CI runners build x86 images, so nothing extra to learn (an image built for one CPU family fails on the other with "exec format error") | ARM (Oracle free tier, my Mac) |
 | K17 | **Cloudflare proxy + Origin Certificate on nginx, SSL "Full (strict)"; domain `s.ghifarij.my.id`** | My domain's DNS is already on Cloudflare; traffic is encrypted end to end | Let's Encrypt/certbot (more moving parts); plain HTTP |
+
+## Process
+
+| ID | Decision | Why | Rejected |
+|---|---|---|---|
+| K18 | **First commits split by author** (2026-11-16): Claude's docs in `46a85b8` (with the `Co-Authored-By` trailer), my `.gitignore` in `1ac17a1` (no trailer) | I write the `.gitignore` myself, so my first commit is done by me | One first commit holding both |
